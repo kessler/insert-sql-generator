@@ -1,17 +1,18 @@
 {
   "name": "sql-insert-query",
   "version": "0.0.1",
-  "description": "",
-  "main": "index.js",  
+  "description": "create generic sql insert queries from javascript objects",
+  "main": "index.js",
+  "keywords": [
+    "sql",
+    "insert",
+    "query"
+  ],
   "scripts": {
     "test": "mocha -R spec"
   },
   "dependencies": {},
-    
-   
-    "author": "Yaniv Kessler", 
-  
-  
+  "author": "Yaniv Kessler",
   "bugs": {
     "url": "https://github.com/kessler/sql-insert-query/issues"
   },
@@ -20,6 +21,8 @@
     "url": "https://github.com/kessler/sql-insert-query"
   },
   "homepage": "https://github.com/kessler/sql-insert-query",
-    
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "should": "^4.6.5"
+  }
 }
