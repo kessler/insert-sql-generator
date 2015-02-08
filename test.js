@@ -23,6 +23,23 @@ describe('creates an insert query and prepares an array of values', function () 
 		result.values.should.eql([1])	
 	})
 
+	it('from a javascript object using static custom value placeholder', function () {
+		var result = insertQuery('myTable', { a: 1, b: '2', c: false }, '%')
+		result.should.have.property('query', 'INSERT INTO myTable (a,b,c) VALUES (%,%,%)')
+		result.should.have.property('values')
+		result.values.should.eql([1, '2', false])
+	})
+
+	it('from a javascript object using dynamic custom value placeholder', function () {
+		var result = insertQuery('myTable', { a: 1, b: '2', c: false }, function(i) {
+			return '%' + (i + 1)
+		})
+
+		result.should.have.property('query', 'INSERT INTO myTable (a,b,c) VALUES (%1,%2,%3)')
+		result.should.have.property('values')
+		result.values.should.eql([1, '2', false])
+	})
+
 	it('but throws an error if no values or fields can be included', function () {
 		(function () {
 			insertQuery('myTable', {})

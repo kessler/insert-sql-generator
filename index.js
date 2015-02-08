@@ -1,6 +1,22 @@
+var util = require('util')
+
 module.exports = function(table, object, fields, valuePlaceholder) {
 	var query = 'INSERT INTO ' + table + ' ('
 
+	// handle calls like siq('table', {...}, '$')
+	if (typeof fields === 'string') {
+		var _valuePlaceholder = fields
+		valuePlaceholder = function () { return _valuePlaceholder }
+		fields = undefined
+	}
+
+	// handle calls like siq('table', {...}, function () { ... })
+	if (typeof fields === 'function') {
+		valuePlaceholder = fields
+		fields = undefined
+	}
+
+	valuePlaceholder = valuePlaceholder || defaultPlaceholder
 	fields = fields || Object.keys(object)
 
 	var values = []
@@ -32,7 +48,7 @@ module.exports = function(table, object, fields, valuePlaceholder) {
 			query += ','
 		}
 
-		query += '?'
+		query += valuePlaceholder(i)
 	}
 
 	query += ')'
@@ -42,4 +58,8 @@ module.exports = function(table, object, fields, valuePlaceholder) {
 		query: query,
 		values: values
 	}
+}
+
+function defaultPlaceholder() {
+	return '?'
 }
