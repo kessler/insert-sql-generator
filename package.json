@@ -1,5 +1,5 @@
 {
-  "name": "sql-insert-query",
+  "name": "insert-sql-generator",
   "version": "0.0.1",
   "description": "create generic sql insert queries from javascript objects",
   "main": "index.js",
@@ -14,13 +14,13 @@
   "dependencies": {},
   "author": "Yaniv Kessler",
   "bugs": {
-    "url": "https://github.com/kessler/sql-insert-query/issues"
+    "url": "https://github.com/kessler/insert-sql-generator/issues"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/kessler/sql-insert-query"
+    "url": "https://github.com/kessler/insert-sql-generator"
   },
-  "homepage": "https://github.com/kessler/sql-insert-query",
+  "homepage": "https://github.com/kessler/insert-sql-generator",
   "license": "MIT",
   "devDependencies": {
     "should": "^4.6.5"

@@ -1,17 +1,17 @@
-# sql-insert-query
+# insert-sql-generator
 
 create generic sql insert queries from javascript objects
 
 ## Install
 ```
-npm install sql-insert-query
+npm install insert-sql-generator
 ```
 
 ## Examples
 
 ### Simple case
 ```
-var insertQuery = require('sql-insert-query')
+var insertQuery = require('insert-sql-generator')
 
 var object = {
     a: 1,
@@ -31,7 +31,7 @@ console.log(result.values)
 
 ### Restrict fields
 ```
-var insertQuery = require('sql-insert-query')
+var insertQuery = require('insert-sql-generator')
 
 var object = {
     a: 1,
@@ -51,7 +51,7 @@ console.log(result.values)
 
 ### Static custom value placeholder
 ```
-var insertQuery = require('sql-insert-query')
+var insertQuery = require('insert-sql-generator')
 
 var object = {
     a: 1,
@@ -72,7 +72,7 @@ console.log(result.values)
 
 ### Dynamic custom value placeholder
 ```
-var insertQuery = require('sql-insert-query')
+var insertQuery = require('insert-sql-generator')
 
 var object = {
     a: 1,
