@@ -1,4 +1,4 @@
-# insert-sql-generator
+# insert-sql-generator [![Build Status](https://secure.travis-ci.org/kessler/insert-sql-generator.png?branch=master)](http://travis-ci.org/kessler/insert-sql-generator)
 
 create generic sql insert queries from javascript objects
 
