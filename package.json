@@ -1,0 +1,25 @@
+{
+  "name": "sql-insert-query",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.js",  
+  "scripts": {
+    "test": "mocha -R spec"
+  },
+  "dependencies": {},
+    
+   
+    "author": "Yaniv Kessler", 
+  
+  
+  "bugs": {
+    "url": "https://github.com/kessler/sql-insert-query/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kessler/sql-insert-query"
+  },
+  "homepage": "https://github.com/kessler/sql-insert-query",
+    
+  "license": "MIT"
+}
