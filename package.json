@@ -1,6 +1,6 @@
 {
   "name": "insert-sql-generator",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "create generic sql insert queries from javascript objects",
   "main": "index.js",
   "keywords": [
