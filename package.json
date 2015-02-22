@@ -23,6 +23,7 @@
   "homepage": "https://github.com/kessler/insert-sql-generator",
   "license": "MIT",
   "devDependencies": {
+    "mocha": "^2.1.0",
     "should": "^4.6.5"
   }
 }
